@@ -1,0 +1,6 @@
+extends layout
+block content
+  h1 atly
+  h2 List of Courses
+  - each course in courses
+    a(href="/course/#{course.id}") #{course.courseName}<br/>

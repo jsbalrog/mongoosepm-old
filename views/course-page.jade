@@ -1,0 +1,18 @@
+extends layout
+block content
+  h1 atly
+  h2= courseName
+  h3= courseDescription
+  p Created by: #{ createdBy.name } (#{createdBy.email})
+  p Students:
+
+  h3 Actions
+    ul
+      li
+        a(href="/course/new") Create a new course
+      li
+        a(href="/course/edit/#{courseId}") Edit course info
+      li
+        a(href="/course/delete/#{courseId}") Delete #{courseName}
+      li
+        a(href="/user") My profile

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  form(id="frmUserProfile", method="post", action="")
+    input(type="hidden", name="userid", id="userid", value="#{userid}")
+    input(type="hidden", name="courseId", id="courseId", value="#{courseId}")
+    label(for="CourseName") Course name
+    input(type="text", name="CourseName" id="CourseName" value="#{courseName}")
+    label(for="CourseDesc") Description
+    input(type="text", name="CourseDesc", id="CourseDesc" value="#{courseDesc}")
+    input(type="submit", value="#{buttonText}")

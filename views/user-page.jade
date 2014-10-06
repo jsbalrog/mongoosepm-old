@@ -1,0 +1,28 @@
+extends layout
+block headjs
+  script.
+    var userID = "#{userID}";
+  script(src="/javascripts/user.js")
+
+block content
+  h1 Welcome to atly
+  h2= name
+  p Email: #{ email }
+    h3 Actions
+    ul
+      li
+        a(href="/") Sign up for an existing course
+      li
+        a(href="/course/new") Create a new course
+      li
+        a(href="/user/edit") Edit user info
+      li
+        a(href="/user/delete") Delete #{ name }
+      li
+        a(href="/logout") Logout #{ name }
+    h3 My courses created
+    ul#mycreatedcourses
+      li loading...
+    h3 My courses enrolled in
+    ul#myenrolledcourses
+        li loading...
